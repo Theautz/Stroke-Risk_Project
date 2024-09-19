@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ตรวจโรคหลอดเลือดสมองด้วย ML</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="/static/style.css" />
+
+    <!-- Link to javascript -->
+    <script src="/static/script.js"></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-holder">
+        <div class="logo">
+          <img
+            src="/static/img/brain.png"
+            alt=""
+            width="50px"
+            style="background-color: #ffffff; border-radius: 50%"
+          />
+        </div>
+        <a href="#" class="logo-text">STROKE</a>
+      </div>
+
+      <!-- Start Navbar -->
+      <nav>
+        <ul id="menu">
+          <li><a href="#page-1">บทความ</a></li>
+          <li><a href="#page-2">ปัจจัยเสี่ยง</a></li>
+          <li><a href="#page-3">อาการของโรค</a></li>
+          <li><a href="#page-4">การป้องกัน</a></li>
+          <li><a href="/login" class="button-nav">ทำแบบประเมิน</a></li>
+        </ul>
+        <a href="#" class="mobile-toggle" onclick="toggleMobileMenu();">
+          <svg
+            class="w-6 h-6 text-gray-800 dark:text-white"
+            aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-width="2"
+              d="M5 7h14M5 12h14M5 17h14"
+            />
+          </svg>
+        </a>
+      </nav>
+      <!-- End Navbar -->
+    </header>
+
+    <main>
+      <!-- Start Home -->
+      <section id="home" class="home-container">
+        <div class="text-home">
+          <h2 class="anim">Are you sure?...</h2>
+          <h1 class="anim">
+            <small class="anim">แค่ปวดหัว หรือ</small> Stroke
+          </h1>
+          <!-- <img src="/static/img/brain-red.png" alt="" width="100px" /> -->
+          <p class="anim">
+            โรคหลอดเลือดสมอง เป็นสาเหตุอันดับ 2 ของการเสียชีวิตจากการป่วย
+            และเป็นสาเหตุอันดับ 3 ที่ทำให้เกิดความพิการ
+            <span class="anim">
+              ทั้งนี้ จากการสำรวจในปี 2562 และสถิติจากกระทรวงสาธารณสุขในปี 2563
+              พบว่า มีผู้เสียชีวิตจากโรคหลอดเลือดสมองถึง 34,545 คน
+              ซึ่งในปัจจุบันก็ยังมีแนวโน้มตัวเลข ว่าจะสูงขึ้นทุกปี
+            </span>
+          </p>
+
+          <div class="btn-start">
+            <a href="/login" class="button anim"
+              ><span>เริ่มทำแบบประเมินความเสี่ยง</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <!-- End Home -->
+
+      <!-- Start What is Stroke? -->
+      <section id="page-1" class="page-1">
+        <div class="text-h">
+          <h1 style="width: 500px">โรคหลอดเลือดสมองคืออะไร ?</h1>
+        </div>
+        <div class="sec1">
+          <div class="text-p">
+            <p>
+              โรคหลอดเลือดสมอง หรือ Stroke คือ
+              ภาวะสมองขาดเลือดที่เกิดจากหลอดเลือดสมองตีบ อุดตัน
+              หรือมีเลือดออกในสมอง ทำให้เลือดไม่สามารถไปเลี้ยงสมองได้
+              เซลล์สมองจึงขาดออกซิเจน ส่งผลให้สมองตายในที่สุด
+            </p>
+            <br />
+            <p>
+              ผู้ป่วยที่เกิดภาวะสมองขาดเลือดจำเป็นจะต้องรีบพบแพทย์ให้เร็วที่สุดในทันที
+              และทำการรักษาอย่างเร่งด่วน
+              เพราะความรุนแรงและระยะเวลาตั้งแต่มีอาการมีผลต่อจำนวนเซลล์สมองที่ตาย
+              ซึ่งจะนำไปสู่ภาวะทุพพลภาพ พิการ หรือเสียชีวิตได้
+            </p>
+          </div>
+          <div class="vdo">
+            <iframe
+              width="460"
+              height="315"
+              src="https://www.youtube.com/embed/_rk6444bUx8?si=kJ6H4ILHyTlZsjjL"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+      <!-- End What is Stroke? -->
+
+      <!-- End Factors of stroke -->
+      <section id="page-2" class="page-2">
+        <div class="text-h">
+          <h1 style="width: 600px">10 ปัจจัยที่ทำให้เกิดโรคหลอดเลือดสมอง</h1>
+        </div>
+        <div class="text-p">
+          <p>
+            โรคหลอดเลือดสมองแบ่งออกเป็น 2 ประเภทหลัก คือ โรคหลอดเลือดสมองตีบ
+            กับหลอดเลือดสมองตีบหรืออุดตัน (Ischemic stroke) และ
+            โรคหลอดเลือดสมองแตก (Hemorrhagic stroke) ซึ่งทั้ง 2 ประเภท
+            มีสาเหตุสำคัญจากปัจจัยหลักๆ ของผู้ป่วย 10 ประการ คือ
+          </p>
+          <br />
+
+          <ol>
+            <li>เป็นโรคความดันโลหิตสูง</li>
+            <li>เป็นโรคเบาหวาน</li>
+            <li>เป็นโรคไขมันในเลือดสูง</li>
+            <li>เป็นผู้มีไขมันคอเรสเตอรอลสูง</li>
+            <li>
+              เป็นโรคหัวใจ เช่น โรคหัวใจเต้นผิดจังหวะ ชนิด atrial fibrillation
+              ภาวะหัวใจล้มเหลว โรคลิ้นหัวใจติดเชื้อ
+            </li>
+            <li>เป็นผู้ที่สูบบุหรี่</li>
+            <li>เป็นโรคอ้วน</li>
+            <li>เป็นผู้ที่ดื่มสุราหรือเครื่องดื่มแอลกอฮอล์ในปริมาณมาก</li>
+            <li>เป็นผู้มีภาวะหยุดหายใจขณะหลับ</li>
+            <li>เป็นผู้ใช้สารเสพติด ยาหรือสารกระตุ้น</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="page-2-2">
+        <div class="text-h">
+          <h1 style="color: #ffffff; background-color: #921224">
+            ปัจจัยที่ทำให้เสี่ยงโรคหลอดเลือดสมองมากกว่าปกติ ?
+          </h1>
+        </div>
+        <div class="text-p">
+          <p>
+            นอกจากปัจจัยเสี่ยงข้างต้น
+            ยังมีกลุ่มคนที่มีความเสี่ยงการเกิดโรคหลอดเลือดสมองได้มากคนทั่วไป
+            ดังนี้
+          </p>
+          <br />
+          <div class="text">
+            <strong>เชื้อชาติ </strong> :
+            กลุ่มคนชาวอเมริกันเชื้อสายแอฟริกันจะมีความเสี่ยงสูงกว่าคนเชื้อชาติอื่น
+            <br />
+            <strong>เพศ</strong> : เพศชายมีความเสี่ยงสูงกว่าเพศหญิง
+            แต่มักพบว่าเพศหญิงจะเป็นโรคหลอดเลือดสมองเมื่ออายุมากขึ้น
+            และมีอัตราการเสียชีวิตมากกว่าเพศชาย <br />
+            <strong>พันธุกรรม</strong> :
+            ในครอบครัวที่มีประวัติเป็นโรคหลอดเลือดสมองจะมีความเสี่ยงมากขึ้น
+            <br />
+            <strong>การใช้ฮอร์โมน</strong> :
+            ในผู้ที่ใช้ยาคุมกำเนิดหรือเคยใช้ฮอร์โมนบำบัดที่มีส่วนประกอบของฮอร์โมนเอสโตรเจน
+            จะเพิ่มความเสี่ยงในการเกิดโรคมากขึ้น
+          </div>
+        </div>
+      </section>
+      <!-- End Factors of stroke -->
+
+      <!-- Start Symptoms of stroke -->
+      <section id="page-3" class="page-3">
+        <div class="text-h">
+          <h1 style="width: 600px">โรคหลอดเลือดสมองมีอาการอย่างไร ?</h1>
+        </div>
+        <div class="text-p">
+          <p>
+            โรคหลอดเลือดสมองตีบ ตัน หรือแตก ทำให้สมองขาดเลือดไปเลี้ยง
+            ซึ่งส่งผลให้สมองเสียหายจึงทำงานผิดปกติและแสดงอาการออกมา
+            โดยความรุนแรงหรืออาการจะมากหรือน้อยก็ขึ้นกับตำแหน่งของสมองที่ถูกทำลาย
+            เช่น
+          </p>
+          <br />
+          <div class="text">
+            <ul>
+              <li>
+                <strong>พูดไม่ชัด</strong> พูดไม่ได้ หรือพูดไม่รู้เรื่อง
+                และไม่สามารถเข้าใจคำพูดของคนอื่น รู้สึกสับสน มึนงง
+                มีปัญหาในการทำความเข้าใจสิ่งที่คนอื่นพูด
+              </li>
+              <li>
+                <strong>แขนขาอ่อนแรง</strong> ชาบริเวณหน้า แขน ขา
+                โดยส่วนใหญ่แล้วอาการจะเกิดกับร่างกายแค่ด้านเดียว
+                ร่วมกับอาการปากเบี้ยว พูดไม่ชัดหรือพูดไม่ได้
+              </li>
+              <li>
+                <strong>ตามัวเฉียบพลัน</strong> มีปัญหาด้านการมองเห็น
+                โดยที่ตาข้างใดข้างหนึ่งหรือทั้งสองข้างเกิดอาการตามัวแบบเฉียบพลัน
+                หรือเห็นภาพซ้อน
+              </li>
+              <li>
+                <strong>มึนงง</strong> เวียนศีรษะ ผู้ป่วยจะมีอาการปวดศีรษะ
+                เวียนหัวเฉียบพลัน ร่วมกับคลื่นไส้อาเจียน
+              </li>
+              <li>
+                <strong>เดินเซ</strong> การทรงตัวผิดปกติ หรือซึมลง (Altered
+                Consciousness)
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="page-3-2">
+        <div class="text-h">
+          <h1 style="color: #ffffff; background-color: #921224">
+            อาการโรคหลอดเลือดสมองแบบไหนต้องรีบพบแพทย์ ?
+          </h1>
+        </div>
+
+        <div class="text-p">
+          <p>
+            หากมีอาการดังที่กล่าวมา ผู้ป่วยควรพบแพทย์ทันที
+            แม้ว่าอาการเหล่านั้นจะเกิดขึ้นเป็นระยะๆ และหายไป
+            ในกรณีที่สงสัยว่าตัวผู้ป่วย หรือคนใกล้ชิดที่มีอาการดังกล่าว
+            ใช่สัญญาณของโรคหลอดเลือดสมองหรือไม่ โดยแนะนำให้ตรวจเช็กตามแนวทางของ
+            “FAST” ดังนี้
+          </p>
+        </div>
+
+        <div class="box">
+          <article>
+            <figure>
+              <div>
+                <img src="/static/img/face.png" alt="" width="100%" />
+                <h3>F (Face)</h3>
+
+                <p>
+                  ให้พยายามยิ้ม แล้วสังเกตว่ามีอาการปากเบี้ยวหรือไม่
+                  และไม่สามารถเข้าใจคำพูดของคนอื่น รู้สึกสับสน มึนงง
+                  มีปัญหาในการทำความเข้าใจสิ่งที่คนอื่นพูด
+                </p>
+              </div>
+            </figure>
+          </article>
+
+          <article>
+            <figure>
+              <div>
+                <img src="/static/img/arm.png" alt="" width="100%" />
+                <h3>A (Arm)</h3>
+                <p>
+                  ยกแขนขึ้นเหนือศีรษะทั้งสองข้าง
+                  แล้วสังเกตว่าแขนข้างใดข้างหนึ่งตกหรือไม่มีแรงหรือไม่
+                  โดยส่วนใหญ่แล้วอาการจะเกิดกับร่างกายแค่ด้านเดียว
+                  ร่วมกับอาการปากเบี้ยว พูดไม่ชัดหรือพูดไม่ได้
+                </p>
+              </div>
+            </figure>
+          </article>
+
+          <article>
+            <figure>
+              <div>
+                <img src="/static/img/speech.png" alt="" width="100%" />
+                <h3>S (Speech)</h3>
+                <p>
+                  ให้ลองถามคำถามง่ายๆ ว่าตอบได้หรือไม่ เข้าใจหรือไม่
+                  เสียงตอบชัดหรือไม่ หรือเห็นภาพซ้อน
+                </p>
+              </div>
+            </figure>
+          </article>
+
+          <article>
+            <figure>
+              <div>
+                <img src="/static/img/time.png" alt="" width="100%" />
+                <h3>T (Time)</h3>
+                <p>
+                  หากเกิดอาการเหล่านี้ 1 ใน 3 อย่าง
+                  มีโอกาสเป็นโรคหลอดเลือดสมองประมาณ 72 % แต่ถ้ามีอาการทั้ง 3 ข้อ
+                  จะมีโอกาสเป็นโรคหลอดเลือดสมองมากว่า 85 % ควรรีบไปพบแพทย์ทันที
+                  เพราะยิ่งผู้ป่วยได้รับการรักษาเร็วเท่าไหร่
+                  ยิ่งลดความเสี่ยงของภาวะสมองขาดเลือด
+                  และลดความรุนแรงของภาวะทุพพลภาพได้มากขึ้นเท่านั้น
+                </p>
+              </div>
+            </figure>
+          </article>
+        </div>
+
+        <div class="btn-start">
+          <a href="/login" class="button"
+            ><span>เริ่มทำแบบประเมินความเสี่ยง</span></a
+          >
+        </div>
+      </section>
+      <!-- End Symptoms of stroke -->
+
+      <!-- Start prevent a stroke -->
+      <section id="page-4" class="page-4">
+        <div class="text-h">
+          <h1 style="width: 700px">
+            การป้องกันโรคหลอดเลือดสมองมีวิธีอย่างไร ?
+          </h1>
+        </div>
+        <div class="text-p">
+          <p>
+            โรคหลอดเลือดสมองแบบเส้นเลือดสมองแตกเฉียบพลัน
+            เป็นโรคที่ไม่มีอาการเตือนล่วงหน้า ดังนั้นในกลุ่มคนที่มีความเสี่ยง
+            การเข้ารับ การตรวจคัดกรองความเสี่ยงโรคหลอดเลือดสมอง
+            เป็นวิธีหนึ่งที่จะช่วยป้องกันไม่ให้เกิดความรุนแรงได้
+            และควรดูแลสุขภาพตัวเอง ร่วมด้วยโดยควรปฏิบัติดังนี้
+          </p>
+          <br />
+          <div class="text">
+            <ul>
+              <li>
+                ปรับเปลี่ยนพฤติกรรม ลดอาหารหวานมันเค็ม
+                มีปัญหาในการทำความเข้าใจสิ่งที่คนอื่นพูด
+              </li>
+              <li>
+                ควบคุมน้ำหนัก ออกกำลังกายสม่ำเสมอ ร่วมกับอาการปากเบี้ยว
+                พูดไม่ชัดหรือพูดไม่ได้
+              </li>
+              <li>
+                ไม่เครียด งดสูบบุหรี่ หลีกเลี่ยงการดื่มเครื่องดื่มแอลกอฮอล์
+                หรือเห็นภาพซ้อน
+              </li>
+              <li>
+                หลีกเลี่ยงการใช้ยาบางกลุ่มที่มีโอกาสทำให้เกิดภาวะหลอดเลือดสมองผิดปกติ
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- End prevent a stroke -->
+
+      <!--Start summarize -->
+      <section class="end">
+        <div class="text-p">
+          <p>
+            โรคหลอดเลือดสมองเป็นโรคที่อันตราย แต่หากรู้เร็ว รักษาทันเวลา
+            ก็สามารถช่วยให้มีคุณภาพชีวิตที่ดีหรือหายเป็นปกติได้ ทั้งนี้
+            โรคหลอดเลือดสมองเป็นโรคที่ป้องกันได้ โดยการตรวจสุขภาพประจำปี
+            และตรวจคัดกรองโรคหลอดเลือดสมองโดยตรง เพื่อค้นหาความเสี่ยง
+            และเลือกแนวทางการป้องกันที่เหมาะสมต่อไป
+          </p>
+          <br />
+          <p style="font-size: 16px; padding-top: 20px">
+            แหล่งอ้างอิง : www.phyathai.com
+          </p>
+        </div>
+      </section>
+      <!--End summarize -->
+    </main>
+
+    <!-- Start Footer -->
+    <footer>
+      <div class="foot-container">
+        <div class="sec abouts">
+          <h2>About Us</h2>
+          <p>
+            This website is part of the project in the subject 01418499-60
+            Computer Science Project. The purpose of the project is to create a
+            model to predict the risk of stroke using machine learning.
+          </p>
+        </div>
+        <div class="sec quicklinks">
+          <h2>Quick Links</h2>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#page-1">บทความ</a></li>
+            <li><a href="#page-2">ปัจจัยเสี่ยง</a></li>
+            <li><a href="#page-3">อาการของโรค</a></li>
+            <li><a href="#page-4">การป้องกัน</a></li>
+            <li><a href="/login">ทำแบบประเมิน</a></li>
+          </ul>
+        </div>
+        <div class="sec contact">
+          <h2>Contact Us</h2>
+          <ul class="info">
+            <li>
+              <span><i class="bi bi-people-fill"></i></span>
+              <span>Ms.Sasithorn Seesad</span> <br />
+              <span>Mr.Warit Traisongkarm</span>
+            </li>
+            <li>
+              <span><i class="bi bi-telephone-fill"></i></span>
+              <p><a href="tel:+66982811963">098-281-1963</a></p>
+              <br />
+              <p><a href="tel:+66948857926">094-885-7926</a></p>
+            </li>
+            <li>
+              <span><i class="bi bi-envelope-fill"></i></span>
+              <p>
+                <a href="mailto:sasithorn.see@ku.th">sasithorn.see@ku.th</a>
+              </p>
+              <br />
+              <p><a href="mailto:warit.tr@ku.th">warit.tr@ku.th</a></p>
+            </li>
+          </ul>
+        </div>
+        <div class="sec chat">
+          <h2>Let's Chat</h2>
+          <p>
+            Have a support question? or tell us more suggestions you'd like to
+            improve!
+          </p>
+          <a href="/contact" class="footer-button"><span>Contact US</span></a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+
+    <div class="copyrightText">
+      <p>Copyright © 2024 Project Com-Sci. All Rights Reserved</p>
+    </div>
+  </body>
+</html>

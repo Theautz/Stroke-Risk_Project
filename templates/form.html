@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Are You Stroke?</title>
+    <link rel="stylesheet" href="/static/style-form.css" />
+    <script src="/static/script-form.js"></script>
+  </head>
+  <body>
+    <div class="form-container">
+      <div class="card">
+        <div class="card-img">
+          <h2 class="card-heading">
+            Are You Stroke?
+            <small>Let's start checking.</small>
+          </h2>
+        </div>
+        <form action="{{url_for('result')}}" class="card-form" method="post">
+          <div class="input gender">
+            <label class="label">Gender</label>
+            <div class="text-detail">
+              Select 0 if you are Male. <br />
+              Select 1 if you are Female.
+            </div>
+            <input
+              class="ans"
+              type="text"
+              id="gender"
+              name="gender"
+              placeholder="0 or 1"
+              required
+            />
+
+            <!-- <label for="female-option" class="radio">
+              <input type="radio" name="selector" id="" />
+              <span>0</span>
+            </label>
+            <label for="male-option" class="radio">
+              <input type="radio" name="selector" id="" />
+              <span>1</span>
+            </label> -->
+          </div>
+
+          <div class="input age">
+            <label class="label">Age</label>
+            <!-- <div class="number">
+              <input type="number" name="" id="" value="0"></div> -->
+            <input
+              class="ans"
+              type="text"
+              id="age"
+              name="age"
+              placeholder="Your age"
+              required
+            />
+          </div>
+
+          <div class="input Hypertension">
+            <label class="label">Hypertension</label>
+            <div class="text-detail">
+              Select 0 if the patient doesn't have hypertension. <br />
+              Select 1 if the patient has hypertension.
+            </div>
+            <input
+              class="ans"
+              type="text"
+              id="hypertension"
+              name="hypertension"
+              placeholder="0 or 1"
+              required
+            />
+            <!-- <label for="not-hyper-option" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>0</span>
+            </label>
+            <label for="hyper-option" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>1</span>
+            </label> -->
+          </div>
+
+          <div class="input Heart disease">
+            <label class="label">Heart disease</label>
+            <div class="text-detail">
+              Select 0 if the patient doesn't have any heart diseases. <br />
+              Select 1 if the patient has a heart disease.
+            </div>
+            <input
+              class="ans"
+              type="text"
+              id="heart_disease"
+              name="heart_disease"
+              placeholder="0 or 1"
+              required
+            />
+            <!-- <label for="not-heart-option" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>0</span>
+            </label>
+            <label for="heart" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>1</span>
+            </label>
+            <hr /> -->
+          </div>
+
+          <div class="input Marital status">
+            <label class="label">Marital status</label>
+            <div class="text-detail">
+              Select 0 if No. <br />
+              Select 1 if Yes.
+            </div>
+            <input
+              class="ans"
+              type="text"
+              id="ever_married"
+              name="ever_married"
+              placeholder="0 or 1"
+              required
+            />
+            <!-- <label for="no-option" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>0</span>
+            </label>
+            <label for="yes" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>1</span>
+            </label>
+            <hr /> -->
+          </div>
+
+          <div class="input Type of work">
+            <label class="label">Type of work</label>
+
+            <div class="text-detail">
+              Select 0 if Never worked. <br />
+              Select 1 if Private occupation. <br />
+              Select 2 if Freelance.
+            </div>
+            <input
+              class="ans"
+              type="text"
+              id="work_type"
+              name="work_type"
+              placeholder="0,1,2"
+              required
+            />
+            <!-- <label for="Never work" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>0</span>
+            </label>
+            <label for="Private" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>1</span>
+            </label>
+            <label for="Freelance" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>2</span>
+            </label>
+            <hr /> -->
+          </div>
+
+          <div class="input Type of residence">
+            <label class="label">Type of residence</label>
+            <div class="text-detail">
+              Select 0 if Living in the countryside. <br />
+              Select 1 if Living in the city.
+            </div>
+            <input
+              class="ans"
+              type="text"
+              id="Residence_type"
+              name="Residence_type"
+              placeholder="0 or 1"
+              required
+            />
+            <!-- <label for="countryside" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>0</span>
+            </label>
+            <label for="city" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>1</span>
+            </label>
+            <hr /> -->
+          </div>
+
+          <div class="input Average glucose level">
+            <label class="label">Average glucose level</label>
+            <input
+              class="ans"
+              type="text"
+              id="avg_glucose_level"
+              name="avg_glucose_level"
+              placeholder="Your average glucose"
+              required
+            />
+            <!-- <div class="number">
+              <input type="number" name="" id="" value="0"></div>
+              <hr> -->
+          </div>
+
+          <div class="input BMI">
+            <label class="label">BMI</label>
+            <input
+              class="ans"
+              type="text"
+              id="bmi"
+              name="bmi"
+              placeholder="Your BMI"
+              required
+            />
+            <!-- <div class="number">
+              <input type="number" name="" id="" value="0"></div>
+              <hr> -->
+          </div>
+
+          <div class="input Smoking status">
+            <label class="label">Smoking status</label>
+            <div class="text-detail">
+              Select 0 if No. <br />
+              Select 1 if Yes.
+            </div>
+            <input
+              class="ans"
+              type="text"
+              id="smoking_status"
+              name="smoking_status"
+              placeholder="0 or 1"
+              required
+            />
+            <!-- <label for="no-option" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>0</span>
+            </label>
+            <label for="yes" class="radio">
+              <input type="checkbox" name="selector" id="" />
+              <span>1</span>
+            </label>
+            <hr /> -->
+          </div>
+
+          <button type="submit" class="button-nav" value="submit">
+            Check Now!
+          </button>
+          <!-- <a href="" class="button-nav">Check Now!</a> -->
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
