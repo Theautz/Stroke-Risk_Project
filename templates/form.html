@@ -16,7 +16,9 @@
             <small>Let's start checking.</small>
           </h2>
         </div>
-        <form action="{{url_for('result')}}" class="card-form" method="post">
+        \
+        <form class="card-form" method="post">
+          <!-- <form action="{{url_for('result')}}" class="card-form" method="post"> -->
           <div class="input gender">
             <label class="label">Gender</label>
             <div class="text-detail">
@@ -241,12 +243,29 @@
             <hr /> -->
           </div>
 
-          <button type="submit" class="button-nav" value="submit">
+          <button
+            type="submit"
+            class="button-nav"
+            value="submit"
+            onclick="saveinfo()"
+          >
             Check Now!
           </button>
           <!-- <a href="" class="button-nav">Check Now!</a> -->
         </form>
       </div>
     </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+      function saveinfo() {
+        Swal.fire({
+          icon: "success",
+          title: "Success",
+        }).then(() => {
+          window.location.href = "/result";
+        });
+      }
+    </script>
   </body>
 </html>
